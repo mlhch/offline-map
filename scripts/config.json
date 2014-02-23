@@ -1,0 +1,2665 @@
+{
+	"ws": {
+		"localhost": {
+			"proxy": "http://localhost:50001/proxy?url=",
+			"geoserverWFS": "http://localhost:8080/geoserver/wfs",
+			"picsFolderUrl": "http://root.travpad.org/temp/",
+			"uploadPhoto": "../../cgi-bin/proxy.py?url=http://www.travpad.org/upload/server/php/",
+			"storeImage": "../../cgi-bin/proxy.py?url=http://www.travpad.org/cgi-bin/travpad-0.4/storeImage.py",
+			"storeFeature": "../../cgi-bin/proxy.py?url=http://www.travpad.org/cgi-bin/travpad-0.4/storeFeature.py",
+			"getAverageRating": "http://www.travpad.org/cgi-bin/travpad-0.4/getAverageRating.py",
+			"getComments": "http://www.travpad.org/cgi-bin/travpad-0.4/getComments.py",
+			"postComment": "http://www.travpad.org/cgi-bin/travpad-0.4/storeComment.py",
+			"reportPoi": "http://www.travpad.org/cgi-bin/travpad-0.4/reportPoi.py",
+			"searchPoi": "http://www.travpad.org/cgi-bin/travpad-0.4/searchPoi.py",
+			"registerUser": "http://www.travpad.org/cgi-bin/travpad-0.4/registerUser.py",
+			"login": "http://www.travpad.org/cgi-bin/travpad-0.4/login.py",
+			"requestForgotPassword": "http://www.travpad.org/cgi-bin/travpad-0.4/sendUserData.py",
+			"changePassword": "http://www.travpad.org/cgi-bin/travpad-0.4/changePassword.py"
+		},
+		"mobile.travpad.org": {
+			"proxy": "//mobile.travpad.org/cgi-bin/travpad-0.4/proxy.py?url=",
+			"geoserverWFS": "http://mobile.travpad.org:8080/geoserver/wfs",
+			"picsFolderUrl": "http://root.travpad.org/temp/",
+			"uploadPhoto": "//mobile.travpad.org/cgi-bin/travpad-0.4/proxy.py?url=http://www.travpad.org/upload/server/php/",
+			"storeImage": "http://mobile.travpad.org/cgi-bin/travpad-0.4/storeImage.py",
+			"storeFeature": "http://mobile.travpad.org/cgi-bin/travpad-0.4/storeFeature.py",
+			"getAverageRating": "http://www.travpad.org/cgi-bin/travpad-0.4/getAverageRating.py",
+			"getComments": "http://www.travpad.org/cgi-bin/travpad-0.4/getComments.py",
+			"postComment": "http://www.travpad.org/cgi-bin/travpad-0.4/storeComment.py",
+			"reportPoi": "http://www.travpad.org/cgi-bin/travpad-0.4/reportPoi.py",
+			"searchPoi": "http://www.travpad.org/cgi-bin/travpad-0.4/searchPoi.py",
+			"registerUser": "http://www.travpad.org/cgi-bin/travpad-0.4/registerUser.py",
+			"login": "http://www.travpad.org/cgi-bin/travpad-0.4/login.py",
+			"requestForgotPassword": "http://www.travpad.org/cgi-bin/travpad-0.4/sendUserData.py",
+			"changePassword": "http://www.travpad.org/cgi-bin/travpad-0.4/changePassword.py"
+		},
+		"root.travpad.org": {
+			"proxy": "//root.travpad.org/cgi-bin/travpad-0.4/proxy.py?url=",
+			"geoserverWFS": "http://www.travpad.org:8080/geoserver/wfs",
+			"getAverageRating": "http://www.travpad.org/cgi-bin/travpad-0.4/getAverageRating.py",
+			"picsFolderUrl": "http://root.travpad.org/temp/",
+			"uploadPhoto": "http://www.travpad.org/upload/server/php/",
+			"storeImage": "http://root.travpad.org/cgi-bin/travpad-0.4/storeImage.py"
+		},
+		"91.123.201.52": {
+			"proxy": "//91.123.201.52/cgi-bin/proxy.py?url=",
+			"geoserverWFS": "http://www.travpad.org:8080/geoserver/wfs",
+			"getAverageRating": "http://www.travpad.org/cgi-bin/travpad-0.4/getAverageRating.py",
+
+			"picsFolderUrl": "http://root.travpad.org/temp/",
+			"uploadPhoto": "http://www.travpad.org/upload/server/php/",
+			"storeImage": "http://www.travpad.org/cgi-bin/travpad-0.4/storeImage.py"
+		}
+	},
+	"tpCategories": [{
+		"name": "Area information",
+		"displayName": "Area information",
+		"style": {
+			"externalGraphic": "area.png",
+			"graphicWidth": 41,
+			"graphicHeight": 36,
+			"graphicXOffset": -4,
+			"graphicYOffset": -36,
+			"cursor": "pointer"
+		},
+		"services": [],
+		"minZoom": 0,
+		"popup": "<h2 class=\"popup-header1\">${name}</h2><div class=\"popup-textpopup-text-intro\">${shortnarrative}</div>",
+		"subCats": [{
+			"name": "Continent",
+			"displayName": "Continent",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Country",
+			"displayName": "Country",
+			"style": null,
+			"popup": "",
+			"subCats": [],
+			"minZoom": 5
+		}, {
+			"name": "County/Province/State",
+			"displayName": "County/Province/State",
+			"style": null,
+			"popup": "",
+			"subCats": [],
+			"minZoom": 5
+		}, {
+			"name": "City",
+			"displayName": "City",
+			"style": null,
+			"popup": "",
+			"subCats": [],
+			"minZoom": 6
+		}, {
+			"name": "Other",
+			"displayName": "Other",
+			"style": null,
+			"popup": "",
+			"subCats": [],
+			"minZoom": 7
+		}]
+	}, {
+		"name": "Local Area information",
+		"displayName": "Local Area information",
+		"style": {
+			"externalGraphic": "local.area.png",
+			"graphicWidth": 41,
+			"graphicHeight": 36,
+			"graphicXOffset": -4,
+			"graphicYOffset": -36,
+			"cursor": "pointer"
+		},
+		"services": [],
+		"minZoom": 11,
+		"popup": "<h2 class=\"popup-header1\">${name}</h2><div class=\"popup-text popup-text-intro\">${shortnarrative}</div>",
+		"subCats": [{
+			"name": "Town",
+			"displayName": "Town",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Village",
+			"displayName": "Village",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Area",
+			"displayName": "Area",
+			"style": null,
+			"popup": "",
+			"subCats": [{
+				"name": "Touristic",
+				"displayName": "Touristic",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Historical",
+				"displayName": "Historical",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Cultural",
+				"displayName": "Cultural",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Cuisine",
+				"displayName": "Cuisine",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Nature",
+				"displayName": "Nature",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Fun",
+				"displayName": "Fun",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Secret",
+				"displayName": "Secret",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Popular",
+				"displayName": "Popular",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Adventure",
+				"displayName": "Adventure",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Sport",
+				"displayName": "Sport",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Safety",
+				"displayName": "Safety",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Travel Information",
+				"displayName": "Travel Information",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "General Travel",
+				"displayName": "General Travel",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Other",
+				"displayName": "Other",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}]
+		}]
+	}, {
+		"name": "Sleep",
+		"displayName": "Sleep",
+		"style": {
+			"externalGraphic": "sleep.png",
+			"graphicWidth": 41,
+			"graphicHeight": 36,
+			"graphicXOffset": -4,
+			"graphicYOffset": -36,
+			"cursor": "pointer"
+		},
+		"services": ["All major credit cards accepted", "24/7 Access", "Restaurant", "Bar", "Internet", "WiFi", "Casino", "Laundry Service", "Self Service", "Washing machine/Dryer", "Book Exchange", "Lost/Found", "Lockers/Deposit box", "Tour Operator", "Air con", "Mini bar", "Dormitory", "LGBT", "Travel information", "Transport Service", "Book Local Attractions", "Shuttle Service", "Car Rental", "Pool", "Spa/Sauna", "Fitness Centre", "Conference Facilities", "Cable/TV/DVD", "Communal Room", "Free Coffee", "Telephone/Skype", "Iron/Ironing Board", "Parking", "Pets Allowed", "Breakfast Included", "Kitchen", "Baby/Family Friendly", "Games room", "BBQ/Outside area", "Towels/Bedlinen Available", "Luggage Drop", "Currency Exchange", "Postal Service", "Jobs/Work", "Disabled Facilities"],
+		"minZoom": 12,
+		"popup": "<h2 class=\"popup-header1\">${name}</h2><div class=\"popup-text popup-text-intro\">${shortnarrative}</div>",
+		"subCats": [{
+			"name": "Hotel",
+			"displayName": "Hotel",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Hostel",
+			"displayName": "Hostel",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Camping",
+			"displayName": "Camping",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Motel",
+			"displayName": "Motel",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Bed & Breakfast",
+			"displayName": "Bed & Breakfast",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Resort",
+			"displayName": "Resort",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Pension",
+			"displayName": "Pension",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Condo/Apartment Hotel",
+			"displayName": "Condo/Apartment Hotel",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Lodge",
+			"displayName": "Lodge",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Guest House",
+			"displayName": "Guest House",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Caravan Park",
+			"displayName": "Caravan Park",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Homestay",
+			"displayName": "Homestay",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Marina",
+			"displayName": "Marina",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Other",
+			"displayName": "Other",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}]
+	}, {
+		"name": "Go Out/Eat/Drink",
+		"displayName": "Go Out/Eat/Drink",
+		"style": {
+			"externalGraphic": "go.out.eat.drink.png",
+			"graphicWidth": 41,
+			"graphicHeight": 36,
+			"graphicXOffset": -4,
+			"graphicYOffset": -36,
+			"cursor": "pointer"
+		},
+		"services": ["All major cards excepted", "Open 24/7", "Home delivery", "Breakfast", "Lunch", "Dinner", "Fish", "Meat", "Sea-Food", "Game", "Poultry", "Vegetarian/Vegan", "Raw Food", "Local Speciality", "International Food", "Take Away", "Drive-Thru", "Buffet/All you can eat", "Baby/Family Friendly", "Theme", "BYO", "Student Friendly/Discount", "Gourmet", "Beer Garden", "Allergy-Aware", " LGBT", "Internet", "WiFi", "Air con", "Travel information", "Parking", "Pets Allowed", "Jobs/Work", "Disabled Facilities", "Accommodation"],
+		"minZoom": 12,
+		"popup": "<h2 class=\"popup-header1\">${name}</h2><div class=\"popup-text popup-text-intro\">${shortnarrative}</div>",
+		"subCats": [{
+				"name": "Restaurant",
+				"displayName": "Restaurant",
+				"style": {
+					"externalGraphic": "restaurant.png",
+					"graphicWidth": 41,
+					"graphicHeight": 36,
+					"graphicXOffset": -4,
+					"graphicYOffset": -36,
+					"cursor": "pointer"
+				},
+				"popup": "<h2 class=\"popup-header1\">${name}</h2><div class=\"popup-text popup-text-intro\">${shortnarrative}</div>",
+				"subCats": [{
+					"name": "African cuisine",
+					"displayName": "African cuisine",
+					"style": null,
+					"popup": "",
+					"subCats": [{
+						"name": "Central African cuisine",
+						"displayName": "Central African cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Cameroonian cuisine",
+							"displayName": "Cameroonian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Congolese cuisine",
+							"displayName": "Congolese cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}, {
+						"name": "East African cuisine",
+						"displayName": "East African cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Burundian cuisine",
+							"displayName": "Burundian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Kenyan cuisine",
+							"displayName": "Kenyan cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Tanzanian cuisine",
+							"displayName": "Tanzanian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Ugandan cuisine",
+							"displayName": "Ugandan cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Maasai cuisine",
+							"displayName": "Maasai cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}, {
+						"name": "Horn of Africa",
+						"displayName": "Horn of Africa",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Eritrean cuisine",
+							"displayName": "Eritrean cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Ethiopian cuisine",
+							"displayName": "Ethiopian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Somali cuisine",
+							"displayName": "Somali cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}, {
+						"name": "North African cuisine",
+						"displayName": "North African cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Algerian cuisine",
+							"displayName": "Algerian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Egyptian cuisine",
+							"displayName": "Egyptian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Moroccan cuisine",
+							"displayName": "Moroccan cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Sudanese cuisine",
+							"displayName": "Sudanese cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Tunisian cuisine",
+							"displayName": "Tunisian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}, {
+						"name": "South African cuisine",
+						"displayName": "South African cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Botswanan cuisine",
+							"displayName": "Botswanan cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Malagasy cuisine",
+							"displayName": "Malagasy cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Mauritian cuisine",
+							"displayName": "Mauritian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Namibian cuisine",
+							"displayName": "Namibian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "South African cuisine",
+							"displayName": "South African cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Zimbabwean cuisine",
+							"displayName": "Zimbabwean cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}, {
+						"name": "West African cuisine",
+						"displayName": "West African cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Burkinabe cuisine",
+							"displayName": "Burkinabe cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Cuisine of C̫te d'Ivoire",
+							"displayName": "Cuisine of C̫te d'Ivoire",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Ghanaian cuisine",
+							"displayName": "Ghanaian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Nigerian cuisine",
+							"displayName": "Nigerian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Sierra Leonean cuisine",
+							"displayName": "Sierra Leonean cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Senegalese cuisine",
+							"displayName": "Senegalese cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}]
+				}, {
+					"name": "Asian cuisine",
+					"displayName": "Asian cuisine",
+					"style": null,
+					"popup": "",
+					"subCats": [{
+						"name": "Central Asian cuisine",
+						"displayName": "Central Asian cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Afghan cuisine",
+							"displayName": "Afghan cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Kazakh cuisine",
+							"displayName": "Kazakh cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Kyrgyz cuisine",
+							"displayName": "Kyrgyz cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Tajik cuisine",
+							"displayName": "Tajik cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Tibetan cuisine",
+							"displayName": "Tibetan cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Turkmen cuisine",
+							"displayName": "Turkmen cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Uyghur cuisine (Xinjiang)",
+							"displayName": "Uyghur cuisine (Xinjiang)",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Uzbek cuisine",
+							"displayName": "Uzbek cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}, {
+						"name": "East Asian cuisine",
+						"displayName": "East Asian cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Chinese cuisine",
+							"displayName": "Chinese cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Japanese cuisine",
+							"displayName": "Japanese cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Korean cuisine",
+							"displayName": "Korean cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Mongolian cuisine",
+							"displayName": "Mongolian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Taiwanese cuisine",
+							"displayName": "Taiwanese cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}, {
+						"name": "Southeast Asian cuisine",
+						"displayName": "Southeast Asian cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Cambodian cuisine",
+							"displayName": "Cambodian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Indonesian cuisine",
+							"displayName": "Indonesian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Laotian cuisine",
+							"displayName": "Laotian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Malaysian cuisine",
+							"displayName": "Malaysian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Burmese cuisine",
+							"displayName": "Burmese cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Filipino cuisine",
+							"displayName": "Filipino cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Singaporean cuisine",
+							"displayName": "Singaporean cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Thai cuisine",
+							"displayName": "Thai cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Vietnamese cuisine",
+							"displayName": "Vietnamese cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}, {
+						"name": "South Asian cuisine",
+						"displayName": "Southeast Asian cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Bangladeshi cuisine",
+							"displayName": "Bangladeshi cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Bhutanese cuisine",
+							"displayName": "Bhutanese cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Maldivian cuisine",
+							"displayName": "Maldivian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Malaysian cuisine",
+							"displayName": "Malaysian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Nepalese cuisine",
+							"displayName": "Nepalese cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Pakistani cuisine",
+							"displayName": "Pakistani cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Sri Lankan cuisine",
+							"displayName": "Sri Lankan cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Indian cuisine",
+							"displayName": "Indian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}, {
+						"name": "West Asian cuisine (Middle East)",
+						"displayName": "West Asian cuisine (Middle East)",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Assyrian cuisine",
+							"displayName": "Assyrian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Iranian cuisine",
+							"displayName": "Iranian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Iraqi cuisine",
+							"displayName": "Iraqi cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Kurdish cuisine",
+							"displayName": "Kurdish cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Bahraini cuisine",
+							"displayName": "Bahraini cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Kuwaiti cuisine",
+							"displayName": "Kuwaiti cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Omani cuisine",
+							"displayName": "Omani cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Qatari cuisine",
+							"displayName": "Qatari cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Saudi Arabian cuisine",
+							"displayName": "Saudi Arabian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Emirati cuisine",
+							"displayName": "Emirati cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Yemeni cuisine",
+							"displayName": "Yemeni cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Israeli cuisine",
+							"displayName": "Israeli cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Jordanian cuisine",
+							"displayName": "Jordanian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Lebanese cuisine",
+							"displayName": "Lebanese cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Palestinian cuisine",
+							"displayName": "Palestinian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Syrian cuisine",
+							"displayName": "Syrian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}]
+				}, {
+					"name": "European cuisine",
+					"displayName": "European cuisine",
+					"style": null,
+					"popup": "",
+					"subCats": [{
+						"name": "Northern European cuisine",
+						"displayName": "Northern European cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Irish cuisine",
+							"displayName": "Irish cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "British cuisine",
+							"displayName": "British cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Danish cuisine",
+							"displayName": "Danish cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Faroese cuisine",
+							"displayName": "Faroese cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Greenlandic cuisine",
+							"displayName": "Greenlandic cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Finnish cuisine",
+							"displayName": "Finnish cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Icelandic cuisine",
+							"displayName": "Icelandic cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Norwegian cuisine",
+							"displayName": "Norwegian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Swedish cuisine",
+							"displayName": "Swedish cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}, {
+						"name": "Western European cuisine",
+						"displayName": "Western European cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Austrian cuisine",
+							"displayName": "Austrian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Belgian cuisine",
+							"displayName": "Belgian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Dutch cuisine",
+							"displayName": "Dutch cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "French cuisine",
+							"displayName": "French cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "German cuisine",
+							"displayName": "German cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}, {
+						"name": "Eastern European cuisine",
+						"displayName": "Eastern European cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Belarusian cuisine",
+							"displayName": "Belarusian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Czech cuisine",
+							"displayName": "Czech cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Hungarian cuisine",
+							"displayName": "Hungarian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Moldovan cuisine",
+							"displayName": "Moldovan cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Polish cuisine",
+							"displayName": "Polish cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Romanian cuisine",
+							"displayName": "Romanian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Russian cuisine",
+							"displayName": "Russian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Slovak cuisine",
+							"displayName": "Slovak cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Slovenian cuisine",
+							"displayName": "Slovenian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Ukrainian cuisine",
+							"displayName": "Ukrainian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Armenian cuisine",
+							"displayName": "Armenian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Azerbaijani cuisine",
+							"displayName": "Azerbaijani cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Georgian cuisine",
+							"displayName": "Georgian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Estonian cuisine",
+							"displayName": "Estonian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Latvian cuisine",
+							"displayName": "Latvian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Lithuanian cuisine",
+							"displayName": "Lithuanian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}, {
+						"name": "Southern European cuisine",
+						"displayName": "Southern European cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Cypriot cuisine",
+							"displayName": "Cypriot cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Albanian cuisine",
+							"displayName": "Albanian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Bosnian cuisine",
+							"displayName": "Bosnian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Bulgarian cuisine",
+							"displayName": "Bulgarian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Croatian cuisine",
+							"displayName": "Croatian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Greek cuisine",
+							"displayName": "Greek cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Macedonian cuisine",
+							"displayName": "Macedonian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Montenegrin cuisine",
+							"displayName": "Montenegrin cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Serbian cuisine",
+							"displayName": "Serbian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Turkish cuisine",
+							"displayName": "Turkish cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Italian cuisine",
+							"displayName": "Italian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Maltese cuisine",
+							"displayName": "Maltese cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Sammarinese cuisine",
+							"displayName": "Sammarinese cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Gibraltarian cuisine",
+							"displayName": "Gibraltarian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Portuguese cuisine",
+							"displayName": "Portuguese cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Spanish cuisine",
+							"displayName": "Spanish cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}]
+				}, {
+					"name": "Cuisine of Oceania",
+					"displayName": "Cuisine of Oceania",
+					"style": null,
+					"popup": "",
+					"subCats": [{
+						"name": "Australian cuisine",
+						"displayName": "Australian cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": []
+					}, {
+						"name": "Cuisine of Mariana Islands",
+						"displayName": "Cuisine of Mariana Islands",
+						"style": null,
+						"popup": "",
+						"subCats": []
+					}, {
+						"name": "New Zealand cuisine",
+						"displayName": "New Zealand cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": []
+					}, {
+						"name": "Palauan cuisine",
+						"displayName": "Palauan cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": []
+					}, {
+						"name": "Samoan cuisine",
+						"displayName": "Samoan cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": []
+					}, {
+						"name": "Tongan cuisine",
+						"displayName": "Tongan cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": []
+					}, {
+						"name": "Other",
+						"displayName": "Other",
+						"style": null,
+						"popup": "",
+						"subCats": []
+					}]
+				}, {
+					"name": "Cuisines of the Americas",
+					"displayName": "Cuisines of the Americas",
+					"style": null,
+					"popup": "",
+					"subCats": [{
+						"name": "North American cuisine",
+						"displayName": "North American cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Canadian cuisine",
+							"displayName": "Canadian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "American cuisine",
+							"displayName": "American cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Mexican cuisine",
+							"displayName": "Mexican cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}, {
+						"name": "Central American cuisine",
+						"displayName": "Central American cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Belizean cuisine",
+							"displayName": "Belizean cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Costa Rican cuisine",
+							"displayName": "Costa Rican cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Salvadoran cuisine",
+							"displayName": "Salvadoran cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Guatemalan cuisine",
+							"displayName": "Guatemalan cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Honduran cuisine",
+							"displayName": "Honduran cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Nicaraguan cuisine",
+							"displayName": "Nicaraguan cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Panamanian cuisine",
+							"displayName": "Panamanian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}, {
+						"name": "South American cuisine",
+						"displayName": "South American cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Argentinian cuisine",
+							"displayName": "Argentinian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Brazilian cuisine",
+							"displayName": "Brazilian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Chilean cuisine",
+							"displayName": "Chilean cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Colombian cuisine",
+							"displayName": "Colombian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Ecuadoran cuisine",
+							"displayName": "Ecuadoran cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Peruvian cuisine",
+							"displayName": "Peruvian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Uruguayan cuisine",
+							"displayName": "Uruguayan cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Venezuelan cuisine",
+							"displayName": "Venezuelan cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}, {
+						"name": "Caribbean cuisine",
+						"displayName": "Caribbean cuisine",
+						"style": null,
+						"popup": "",
+						"subCats": [{
+							"name": "Cuisine of Antigua and Barbuda",
+							"displayName": "Cuisine of Antigua and Barbuda",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Cuban cuisine",
+							"displayName": "Cuban cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Cuisine of Cura̤ao",
+							"displayName": "Cuisine of Cura̤ao",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Dominican cuisine",
+							"displayName": "Dominican cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Dominican Republic cuisine",
+							"displayName": "Dominican Republic cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Grenadian cuisine",
+							"displayName": "Grenadian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Guyanese cuisine",
+							"displayName": "Guyanese cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Haitian cuisine",
+							"displayName": "Haitian cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Jamaican cuisine",
+							"displayName": "Jamaican cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Martinican cuisine",
+							"displayName": "Martinican cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Puerto Rican cuisine",
+							"displayName": "Puerto Rican cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Cuisine of Saint Kitts and Nevis",
+							"displayName": "Cuisine of Saint Kitts and Nevis",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Trinidad and Tobago cuisine",
+							"displayName": "Trinidad and Tobago cuisine",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}, {
+							"name": "Other",
+							"displayName": "Other",
+							"style": null,
+							"popup": "",
+							"subCats": []
+						}]
+					}]
+				}, {
+					"name": "Local",
+					"displayName": "Local",
+					"style": null,
+					"popup": "",
+					"subCats": []
+				}, {
+					"name": "International",
+					"displayName": "International",
+					"style": null,
+					"popup": "",
+					"subCats": []
+				}, {
+					"name": "Other",
+					"displayName": "Other",
+					"style": null,
+					"popup": "",
+					"subCats": []
+				}]
+			}, {
+				"name": "Bar/Pub",
+				"displayName": "Bar/Pub",
+
+				"style": {
+					"externalGraphic": "bar.pub.png",
+					"graphicWidth": 41,
+					"graphicHeight": 36,
+					"graphicXOffset": -4,
+					"graphicYOffset": -36,
+					"cursor": "pointer"
+				},
+				"popup": "<h2 class=\"popup-header1\">${name}</h2><div class=\"popup-text popup-text-intro\">${shortnarrative}</div>",
+				"subCats": []
+			}, {
+				"name": "Cafe/Coffee Shop",
+				"displayName": "Cafe/Coffee Shop",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Fast-food",
+				"displayName": "Fast-food",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Delis/Bodegas",
+				"displayName": "Delis/Bodegas",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Bistro/Brasserie",
+				"displayName": "Bistro/Brasserie",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Steakhouse/BBQ",
+				"displayName": "Steakhouse/BBQ",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Kiosk/Stand",
+				"displayName": "Kiosk/Stand",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Diner",
+				"displayName": "Diner",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "SnackBar",
+				"displayName": "SnackBar",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Bakery",
+				"displayName": "Bakery",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Food-Court",
+				"displayName": "Food-Court",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Juice Bar",
+				"displayName": "Juice Bar",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Tea Room",
+				"displayName": "Tea Room",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Brewery",
+				"displayName": "Brewery",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Winery",
+				"displayName": "Winery",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Bar/Lounge",
+				"displayName": "Bar/Lounge",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Wine Bar",
+				"displayName": "Wine Bar",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Cocktail Bar",
+				"displayName": "Cocktail Bar",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Hotel Bar",
+				"displayName": "Hotel Bar",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Sports Bar",
+				"displayName": "Sports Bar",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Karaoke Bar",
+				"displayName": "Karaoke Bar",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Gay-bar/Club",
+				"displayName": "Gay-bar/Club",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Nightclub",
+				"displayName": "Nightclub",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Jazz Club",
+				"displayName": "Jazz Club",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Rock Club",
+				"displayName": "Rock Club",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Comedy Club",
+				"displayName": "Comedy Club",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Music Venue",
+				"displayName": "Music Venue",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Concert hall",
+				"displayName": "Concert hall",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Opera",
+				"displayName": "Opera",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Theatre",
+				"displayName": "Theatre",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Gallery",
+				"displayName": "Gallery",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Musical",
+				"displayName": "Musical",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Dance studio",
+				"displayName": "Dance studio",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Casino",
+				"displayName": "Casino",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Speak-easy/Underground",
+				"displayName": "Speak-easy/Underground",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Rave",
+				"displayName": "Rave",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Party",
+				"displayName": "Party",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Strip-Club",
+				"displayName": "Strip-Club",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Other: \"Go Out\"",
+				"displayName": "Condo-hotel",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Other: \"Eat\"",
+				"displayName": "Other: \"Eat\"",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Other: \"Drink\"",
+				"displayName": "Other: \"Drink\"",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Other: \"Go out\"",
+				"displayName": "Other: \"Go out\"",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}
+
+		]
+	}, {
+		"name": "Sights",
+		"displayName": "Sights",
+		"style": {
+			"externalGraphic": "sights.png",
+			"graphicWidth": 41,
+			"graphicHeight": 36,
+			"graphicXOffset": -4,
+			"graphicYOffset": -36,
+			"cursor": "pointer"
+		},
+		"services": ["All major cards accepted", "24/7 Access", "Must See", "Food", "Drink", "Internet", "WiFi", "Business/Shop", "Tours", "Transport", "Accommodation", "Disabled Facilities", "Student/Senior Prices", "LGBT", "Travel Information ", "Baby/Family Friendly", "Parking", "Pets Allowed", "Self Service", "Book Local Attractions", "Transport Service"],
+		"minZoom": 12,
+		"popup": "<h2 class=\"popup-header1\">${name}</h2><div class=\"popup-text popup-text-intro\">${shortnarrative}</div>",
+		"subCats": [{
+			"name": "Popular",
+			"displayName": "Popular",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Cultural",
+			"displayName": "Cultural",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Historical/Archaeological",
+			"displayName": "Historical/Archaeological",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Architectural",
+			"displayName": "Architectural",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Fun",
+			"displayName": "Fun",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Local/Secret",
+			"displayName": "Local/Secret",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Educational",
+			"displayName": "Educational",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Adventure",
+			"displayName": "Adventure",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Wildlife/Nature",
+			"displayName": "Wildlife/Nature",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Religious",
+			"displayName": "Religious",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Other",
+			"displayName": "Other",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}]
+	}, {
+		"name": "StuffToDo",
+		"displayName": "Stuff to do",
+		"style": {
+			"externalGraphic": "stuff.to.do.png",
+			"graphicWidth": 41,
+			"graphicHeight": 36,
+			"graphicXOffset": -4,
+			"graphicYOffset": -36,
+			"cursor": "pointer"
+		},
+		"services": ["All major cards accepted", "24/7 Access", "Local", "Countrywide", "Guided", "Tourist Information", "Internet", "WiFi", "Food", "Drink", "Equipment Hire", "Disabled Facilities", "Self Service ", "Lockers/Deposit box", "Tour Operator", "Air con", "LGBT", "Travel information", "Transport Service", "Book Local Attractions", "Parking", "Pets Allowed", "Baby/Family-Friendly", "Currency Exchange", "Jobs/Work"],
+		"minZoom": 12,
+		"popup": "<h2 class=\"popup-header1\">${name}</h2><div class=\"popup-text popup-text-intro\">${shortnarrative}</div>",
+		"subCats": [{
+			"name": "Activities",
+			"displayName": "Activities",
+			"style": null,
+			"popup": "",
+			"subCats": [{
+				"name": "Land",
+				"displayName": "Land",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Air",
+				"displayName": "Air",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Water",
+				"displayName": "Water",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Snow",
+				"displayName": "Snow",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "City",
+				"displayName": "City",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Sports",
+				"displayName": "Sports",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Countryside",
+				"displayName": "Countryside",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Tourist",
+				"displayName": "Tourist",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Cultural",
+				"displayName": "Cultural",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Historical",
+				"displayName": "Historical",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Educational",
+				"displayName": "Educational",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Entertainment",
+				"displayName": "Entertainment",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Adventure",
+				"displayName": "Adventure",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Nature",
+				"displayName": "Nature",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Outdoor",
+				"displayName": "Outdoor",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Volunteer",
+				"displayName": "Volunteer",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Food-Tourism",
+				"displayName": "Food-Tourism",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Shopping",
+				"displayName": "Shopping",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Religious",
+				"displayName": "Religious",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Adult",
+				"displayName": "Adult",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Eco-Tourism",
+				"displayName": "Eco-Tourism",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "LGBT",
+				"displayName": "LGBT",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Other",
+				"displayName": "Other",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}]
+
+
+		}, {
+			"name": "Tour Operator",
+			"displayName": "Tour Operator",
+			"style": null,
+			"popup": "",
+			"subCats": [{
+				"name": "Land",
+				"displayName": "Land",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Air",
+				"displayName": "Air",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Water",
+				"displayName": "Water",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Snow",
+				"displayName": "Snow",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "City",
+				"displayName": "City",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Wildlife/Nature",
+				"displayName": "Wildlife/Nature",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Sport",
+				"displayName": "Sport",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}, {
+				"name": "Other",
+				"displayName": "Other",
+				"style": null,
+				"popup": "",
+				"subCats": []
+			}]
+		}]
+	}, {
+		"name": "Business/Shop",
+		"displayName": "Business/Shop",
+		"style": {
+			"externalGraphic": "business.shop.png",
+			"graphicWidth": 41,
+			"graphicHeight": 36,
+			"graphicXOffset": -4,
+			"graphicYOffset": -36,
+			"cursor": "pointer"
+		},
+		"services": ["All major credit cards accepted", "Open 24/7", "Food", "Drink", "Internet", "WiFi", "Parking", "Travel Information", "Pets Allowed", "Baby/Family-Friendly", "Currency Exchange", "Jobs/Work", "Disabled Facilities"],
+		"minZoom": 12,
+		"popup": "<h2 class=\"popup-header1\">${name}</h2><div class=\"popup-text popup-text-intro\">${shortnarrative}</div>",
+		"subCats": [{
+			"name": "Tourist Information",
+			"displayName": "Tourist Information",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Tourist Shop",
+			"displayName": "Tourist Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Souvenir Shop",
+			"displayName": "Souvenir Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Antique Shop",
+			"displayName": "Antique Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Arts & Crafts Shop",
+			"displayName": "Arts & Crafts Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Auto Shop",
+			"displayName": "Auto Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Bike Shop",
+			"displayName": "Bike Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Board Shop",
+			"displayName": "Board Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Book Shop",
+			"displayName": "Book Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Bridal Shop",
+			"displayName": "Bridal Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Candy Store/Sweet Shop",
+			"displayName": "Candy Store/Sweet Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Clothing Shop",
+			"displayName": "Clothing Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Accessory Shop",
+			"displayName": "Accessory Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Kids Shop",
+			"displayName": "Kids Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Men's Clothing Shop",
+			"displayName": "Men's Clothing Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Shoe Shop",
+			"displayName": "Shoe Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Women's Clothing Shop",
+			"displayName": "Women's Clothing Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Cosmetics Shop",
+			"displayName": "Cosmetics Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Department Store",
+			"displayName": "Department Store",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Design Studio",
+			"displayName": "Design Studio",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Drugstore or Pharmacy",
+			"displayName": "Drugstore or Pharmacy",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Flea Market",
+			"displayName": "Flea Market",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Flower Shop",
+			"displayName": "Flower Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Food and Drink Shop",
+			"displayName": "Food and Drink Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Bakery",
+			"displayName": "Bakery",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Butcher",
+			"displayName": "Butcher",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Cheese Shop",
+			"displayName": "Cheese Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Deli/Bodega",
+			"displayName": "Deli/Bodega",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Farmer's Market",
+			"displayName": "Farmer's Market",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Fish Market",
+			"displayName": "Fish Market",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Gourmet Shop",
+			"displayName": "Home stay",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Grocery Shop",
+			"displayName": "Grocery Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Alcohol Shop",
+			"displayName": "Alcohol Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Furniture/Home Shop",
+			"displayName": "Furniture/Home Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Gas/Petrol Station",
+			"displayName": "Gas/Petrol Station",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Car Mechanic",
+			"displayName": "Car Mechanic",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Gift Shop",
+			"displayName": "Gift Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Hardware Shop",
+			"displayName": "Hardware Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Technology Shop",
+			"displayName": "Technology Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Hobby Shop",
+			"displayName": "Hobby Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Jewellery Shop",
+			"displayName": "Jewellery Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Laundry/Dry Cleaner",
+			"displayName": "Laundry/Dry Cleaner",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Shopping Centre/Mall",
+			"displayName": "Shopping Centre/Mall",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Music Shop",
+			"displayName": "Music Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Stationery Shop",
+			"displayName": "Stationery Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Pet Shop",
+			"displayName": "Pet Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Post Office",
+			"displayName": "Post Office",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Record Shop",
+			"displayName": "Record Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Supermarket",
+			"displayName": "Supermarket",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Hairdresser/Barber",
+			"displayName": "Hairdresser/Barber",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Tobacconist/Tabac",
+			"displayName": "Tobacconist/Tabac",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Spa/Beauty/Tanning Parlor",
+			"displayName": "Spa/Beauty/Tanning Parlor",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Sporting Goods Shop",
+			"displayName": "Sporting Goods Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Tattoo Parlor",
+			"displayName": "Tattoo Parlor",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Thrift/Charity/Vintage Shop",
+			"displayName": "Thrift/Charity/Vintage Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Toy Shop",
+			"displayName": "Toy Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Video-Game Shop",
+			"displayName": "Video-Game Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Video Shop",
+			"displayName": "Video Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Kiosk",
+			"displayName": "Kiosk",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Other",
+			"displayName": "Other",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}]
+	}, {
+		"name": "Transport",
+		"displayName": "Transport",
+		"style": {
+			"externalGraphic": "transport.png",
+			"graphicWidth": 41,
+			"graphicHeight": 36,
+			"graphicXOffset": -4,
+			"graphicYOffset": -36,
+			"cursor": "pointer"
+		},
+		"services": ["All major cards accepted", "Internet", "WiFi", "Timetable", "Online Booking", "Food", "Drink", "Lounge", "24/7 Access", "Tourist Information", "Pets Allowed", "Baby/Family-Friendly", "Lockers/Deposit box", "Transport Service", "Prayer Room", "Book Local Attractions", "Currency Exchange", "Air con", "Lost/Found", "Student/Senior prices"],
+		"minZoom": 12,
+		"popup": "<h2 class=\"popup-header1\">${name}</h2><div class=\"popup-text popup-text-intro\">${shortnarrative}</div>",
+		"subCats": [{
+			"name": "Airport",
+			"displayName": "Airport",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Train Station",
+			"displayName": "Train Station",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Metro/Underground Station",
+			"displayName": "Metro/Underground Station",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Bus Station",
+			"displayName": "Bus Station",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Boat/Ferry/Port",
+			"displayName": "Boat/Ferry/Port",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Taxi Rank",
+			"displayName": "Taxi Rank",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Car Rental Firm",
+			"displayName": "Car Rental Firm",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Cargo/Shipping",
+			"displayName": "Cargo/Shipping",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Stop/Halt",
+			"displayName": "Stop/Halt",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Other",
+			"displayName": "Other",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}]
+	}, {
+		"name": "Internet",
+		"displayName": "Internet",
+		"style": {
+			"externalGraphic": "internet.png",
+			"graphicWidth": 41,
+			"graphicHeight": 36,
+			"graphicXOffset": -4,
+			"graphicYOffset": -36,
+			"cursor": "pointer"
+		},
+		"services": ["All major cards accepted", "Internet", "WiFi", "Printing/Scanning", "Computer Services", "Telephone", "Telephone Cards", "Copy/Transfer", "Gaming", "Video-Calls", "Food", "Drink", "Open 24/7"],
+		"minZoom": 12,
+		"popup": "<h2 class=\"popup-header1\">${name}</h2><div class=\"popup-text popup-text-intro\">${shortnarrative}</div>",
+		"subCats": [{
+			"name": "Business/Shop",
+			"displayName": "Business/Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Internet Cafe",
+			"displayName": "Internet Cafe",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "WiFi",
+			"displayName": "WiFi",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Other",
+			"displayName": "Other",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}]
+	}, {
+		"name": "Money",
+		"displayName": "Money",
+		"style": {
+			"externalGraphic": "money.png",
+			"graphicWidth": 41,
+			"graphicHeight": 36,
+			"graphicXOffset": -4,
+			"graphicYOffset": -36,
+			"cursor": "pointer"
+		},
+		"services": ["All major cards excepted", "Visa", "MasterCard", "Currency Exchange", "Local Currency", "Dollar", "Euro", "Internet", "WiFi", "Online Banking", "Travelers Cheques", "Money Transfers", "ATM", "24/7 Access", "Parking"],
+		"minZoom": 12,
+		"popup": "<h2 class=\"popup-header1\">${name}</h2><div class=\"popup-text popup-text-intro\">${shortnarrative}</div>",
+		"subCats": [{
+			"name": "Bank",
+			"displayName": "Bank",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Exchange",
+			"displayName": "Exchange",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "ATM",
+			"displayName": "ATM",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Business/Shop",
+			"displayName": "Business/Shop",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Post-Office",
+			"displayName": "Post-Office",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}, {
+			"name": "Other",
+			"displayName": "Other",
+			"style": null,
+			"popup": "",
+			"subCats": []
+		}]
+	}]
+}
